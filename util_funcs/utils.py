@@ -102,10 +102,17 @@ def download_file(url):
 
 # ------------Logging
 import logging
+from pathlib import Path
 
 
-logging.basicConfig(filename='python.log', level=logging.ERROR)
-logging.error('This message should go to the log file')
+log_file = Path(__file__).parent / "python.log"
+logging.basicConfig(
+    filename=log_file,
+    level=logging.ERROR,
+    datefmt="%d-%m-%Y %H:%M:%S",
+    format="%(asctime)s %(levelname)-8s %(message)s",
+)
+logging.error("This message should go to the log file")
 
 
 # ------------PDF to Text
