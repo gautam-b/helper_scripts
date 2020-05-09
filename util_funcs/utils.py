@@ -44,7 +44,7 @@ def save_to_csv(file_name, rows_list, header=False):
     with open(file_name, 'a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         if header:
-            writer.writerow(HEADERS)
+            writer.writerow(header)
 
         # rows_list is a list of list with each row is a list of individual field
         [writer.writerow(row) for row in rows_list]
