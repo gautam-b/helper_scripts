@@ -1,19 +1,12 @@
 """
 Count the frequency of each charecter in a string and return the sorted dict
 """
-from typing import Dict
+from typing import Mapping
+from collections import Counter
 
 
-def char_count(text: str) -> Dict[str, int]:
-    chars = dict()
-    for c in text.lower():
-        if c not in chars.keys():
-            chars[c] = 0
-
-        chars[c] += 1
-
-    # sorting and returning
-    return {k: v for k, v in sorted(chars.items(), key=lambda item: item[1], reverse=True)}
+def char_count(text: str) -> Mapping[str, int]:
+    return Counter(text)
 
 
 if __name__ == "__main__":
