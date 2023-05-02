@@ -1,4 +1,4 @@
-﻿certifi==2022.12.7
-nltk==3.4.5
+certifi==2022.12.7
+nltk==3.6.6
 six==1.14.0
 wincertstore==0.2
